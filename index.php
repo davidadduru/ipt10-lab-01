@@ -1,118 +1,57 @@
-<!DOCTYPE html>
+<?php
+
+require "helpers/helper-functions.php";
+
+session_start();
+?>
 <html>
 <head>
-    <title>Registration Page</title>
-    <style>
-        body {
-            background-color: Lightskyblue;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        hr {
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="email"], input[type="date"], input[type="number"], select, textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>IPT10 Laboratory Activity #2</title>
+    <link rel="icon" href="https://phpsandbox.io/assets/img/brand/phpsandbox.png">
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.15.0.min.css" />   
 </head>
 <body>
 
-    <img src="https://www.auf.edu.ph/home/images/logo2.png" alt="Logo" />
-    <hr />
+<section class="p-section--hero">
+  <div class="row--50-50-on-large">
+    <div class="col">
+      <div class="p-section--shallow">
+        <h1>
+          Laboratory Activity #2<br />PHP Sessions and Functions
+        </h1>
+        <h2>
+          Integrative Programming and Technologies
+        </h2>
+      </div>
+      <div class="p-section--shallow">
+        <p>
+            This simple web application demonstrates handling of data passed through multiple PHP files, data is shared via the server's session variables.
+        </p>
+        <p>
+          Please register your data by clicking the button.
+        </p>
+      </div>
+      <div class="p-cta-block">
+        <a href="step-1.php" class="p-button--positive">Register</a>
 
-    <form action="target.php" method="POST">
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" size="15" required />
+        <p>
+            <small>
+                Design System: <a href="https://vanillaframework.io/docs">Vanilla Framework</a>
+            </small>
+        </p>
+      </div>
+    </div>
 
-        <label for="middlename">Middle Name</label>
-        <input type="text" id="middlename" name="middlename" size="15" />
+    <div class="col">
+      <div class="p-image-container--3-2 is-cover">
+        <img class="p-image-container__image" src="https://www.auf.edu.ph/home/images/ittc.jpg" alt="">
+      </div>
+    </div>
 
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="lastname" size="15" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="country_code">Phone</label>
-        <input type="text" id="country_code" name="country_code" value="+63" size="2" />
-        <input type="number" id="phone_number" name="phone_number" size="10" required />
-
-        <label>Sex</label>
-        <input type="radio" id="male" name="sex" value="male" checked="checked" />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="sex" value="female" />
-        <label for="female">Female</label>
-
-        <label for="birthdate">Birthdate</label>
-        <input type="date" id="birthdate" name="birthdate" required />
-
-        <label for="program">Program</label>
-        <select id="program" name="program" required>
-            <option value="BSA">BS Accountancy</option>
-            <option value="BSBA">BS Business Administration</option>
-            <option value="BSEE">BS Electronics Engineering</option>
-            <option value="BSIT">BS Information Technology</option>
-            <option value="BSCS">BS Computer Science</option>
-        </select>
-
-        <label for="address">Address</label>
-        <textarea id="address" name="address" rows="5" required></textarea>
-
-        <input type="submit" value="Register Now" />
-    </form>
+  </div>
+</section>
 
 </body>
 </html>
+
